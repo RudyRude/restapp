@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @rest.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @rest.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @rest.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_rest_path(@rest) %> |
+<%= link_to 'Back', rests_path %>

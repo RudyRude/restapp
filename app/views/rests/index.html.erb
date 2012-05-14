@@ -1,0 +1,27 @@
+<h1>Listing rests</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rests.each do |rest| %>
+  <tr>
+    <td><%= rest.name %></td>
+    <td><%= rest.address %></td>
+    <td><%= rest.description %></td>
+    <td><%= link_to 'Show', rest %></td>
+    <td><%= link_to 'Edit', edit_rest_path(rest) %></td>
+    <td><%= link_to 'Destroy', rest, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rest', new_rest_path %>
